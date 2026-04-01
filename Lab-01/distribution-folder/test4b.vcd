@@ -1,0 +1,141 @@
+$date
+	Wed Apr 01 12:18:11 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module Adder4bit_tb $end
+$var wire 4 ! S [3:0] $end
+$var wire 1 " Cout $end
+$var reg 4 # A [3:0] $end
+$var reg 4 $ B [3:0] $end
+$var reg 1 % Cin $end
+$scope module uut $end
+$var wire 4 & A [3:0] $end
+$var wire 4 ' B [3:0] $end
+$var wire 1 % Cin $end
+$var wire 4 ( S [3:0] $end
+$var wire 1 " Cout $end
+$var wire 1 ) Cin3 $end
+$var wire 1 * Cin2 $end
+$var wire 1 + Cin1 $end
+$scope module cir1 $end
+$var wire 1 , A $end
+$var wire 1 - B $end
+$var wire 1 % Cin $end
+$var wire 1 + Cout $end
+$var wire 1 . S $end
+$upscope $end
+$scope module cir2 $end
+$var wire 1 / A $end
+$var wire 1 0 B $end
+$var wire 1 + Cin $end
+$var wire 1 * Cout $end
+$var wire 1 1 S $end
+$upscope $end
+$scope module cir3 $end
+$var wire 1 2 A $end
+$var wire 1 3 B $end
+$var wire 1 * Cin $end
+$var wire 1 ) Cout $end
+$var wire 1 4 S $end
+$upscope $end
+$scope module cir4 $end
+$var wire 1 5 A $end
+$var wire 1 6 B $end
+$var wire 1 ) Cin $end
+$var wire 1 " Cout $end
+$var wire 1 7 S $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#20000
+11
+b11 !
+b11 (
+1.
+10
+1,
+b10 $
+b10 '
+b1 #
+b1 &
+#40000
+17
+b1010 !
+b1010 (
+0.
+1)
+1"
+13
+16
+0,
+12
+15
+b1110 $
+b1110 '
+b1100 #
+b1100 &
+#60000
+07
+01
+0)
+0"
+00
+03
+06
+02
+05
+b1 !
+b1 (
+1.
+b0 $
+b0 '
+b0 #
+b0 &
+1%
+#80000
+14
+1*
+1+
+0.
+b100 !
+b100 (
+01
+1-
+10
+b11 $
+b11 '

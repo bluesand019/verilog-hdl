@@ -1,0 +1,200 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002617a8cd820 .scope module, "subtractor4bit_tb" "subtractor4bit_tb" 2 3;
+ .timescale -9 -9;
+v000002617a985650_0 .var "A", 3 0;
+v000002617a9856f0_0 .var "B", 3 0;
+v000002617a9850b0_0 .var "bin", 0 0;
+v000002617a985bf0_0 .net "bout", 0 0, L_000002617a989960;  1 drivers
+v000002617a9858d0_0 .net "diff", 3 0, L_000002617a986190;  1 drivers
+S_000002617a8cd9b0 .scope module, "uut" "subtractor4bit" 2 11, 3 1 0, S_000002617a8cd820;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "A";
+    .port_info 1 /INPUT 4 "B";
+    .port_info 2 /INPUT 1 "bin";
+    .port_info 3 /OUTPUT 4 "diff";
+    .port_info 4 /OUTPUT 1 "bout";
+v000002617a924240_0 .net "A", 3 0, v000002617a985650_0;  1 drivers
+v000002617a9224e0_0 .net "B", 3 0, v000002617a9856f0_0;  1 drivers
+v000002617a922620_0 .net "b1", 0 0, L_000002617a920f80;  1 drivers
+v000002617a9226c0_0 .net "b2", 0 0, L_000002617a921530;  1 drivers
+v000002617a922a80_0 .net "b3", 0 0, L_000002617a9210d0;  1 drivers
+v000002617a91c3a0_0 .net "bin", 0 0, v000002617a9850b0_0;  1 drivers
+v000002617a91c440_0 .net "bout", 0 0, L_000002617a989960;  alias, 1 drivers
+v000002617a986050_0 .net "diff", 3 0, L_000002617a986190;  alias, 1 drivers
+L_000002617a984ed0 .part v000002617a985650_0, 0, 1;
+L_000002617a985150 .part v000002617a9856f0_0, 0, 1;
+L_000002617a985510 .part v000002617a985650_0, 1, 1;
+L_000002617a986230 .part v000002617a9856f0_0, 1, 1;
+L_000002617a985f10 .part v000002617a985650_0, 2, 1;
+L_000002617a986410 .part v000002617a9856f0_0, 2, 1;
+L_000002617a9860f0 .part v000002617a985650_0, 3, 1;
+L_000002617a984cf0 .part v000002617a9856f0_0, 3, 1;
+L_000002617a986190 .concat8 [ 1 1 1 1], L_000002617a921370, L_000002617a921060, L_000002617a921e60, L_000002617a921140;
+S_000002617a92b440 .scope module, "stage0" "subtractor1bit" 3 13, 4 1 0, S_000002617a8cd9b0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "borrow_in";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "borrow_out";
+L_000002617a921df0 .functor XOR 1, L_000002617a984ed0, L_000002617a985150, C4<0>, C4<0>;
+L_000002617a921370 .functor XOR 1, L_000002617a921df0, v000002617a9850b0_0, C4<0>, C4<0>;
+L_000002617a921d80 .functor NOT 1, L_000002617a984ed0, C4<0>, C4<0>, C4<0>;
+L_000002617a921bc0 .functor AND 1, L_000002617a921d80, L_000002617a985150, C4<1>, C4<1>;
+L_000002617a921a70 .functor NOT 1, L_000002617a984ed0, C4<0>, C4<0>, C4<0>;
+L_000002617a920ff0 .functor OR 1, L_000002617a921a70, L_000002617a985150, C4<0>, C4<0>;
+L_000002617a9215a0 .functor AND 1, L_000002617a920ff0, v000002617a9850b0_0, C4<1>, C4<1>;
+L_000002617a920f80 .functor OR 1, L_000002617a921bc0, L_000002617a9215a0, C4<0>, C4<0>;
+v000002617a922c60_0 .net *"_ivl_0", 0 0, L_000002617a921df0;  1 drivers
+v000002617a9235c0_0 .net *"_ivl_10", 0 0, L_000002617a920ff0;  1 drivers
+v000002617a922bc0_0 .net *"_ivl_12", 0 0, L_000002617a9215a0;  1 drivers
+v000002617a9237a0_0 .net *"_ivl_4", 0 0, L_000002617a921d80;  1 drivers
+v000002617a923de0_0 .net *"_ivl_6", 0 0, L_000002617a921bc0;  1 drivers
+v000002617a923840_0 .net *"_ivl_8", 0 0, L_000002617a921a70;  1 drivers
+v000002617a923340_0 .net "a", 0 0, L_000002617a984ed0;  1 drivers
+v000002617a923520_0 .net "b", 0 0, L_000002617a985150;  1 drivers
+v000002617a922b20_0 .net "borrow_in", 0 0, v000002617a9850b0_0;  alias, 1 drivers
+v000002617a923e80_0 .net "borrow_out", 0 0, L_000002617a920f80;  alias, 1 drivers
+v000002617a9238e0_0 .net "diff", 0 0, L_000002617a921370;  1 drivers
+S_000002617a92b5d0 .scope module, "stage1" "subtractor1bit" 3 22, 4 1 0, S_000002617a8cd9b0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "borrow_in";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "borrow_out";
+L_000002617a921920 .functor XOR 1, L_000002617a985510, L_000002617a986230, C4<0>, C4<0>;
+L_000002617a921060 .functor XOR 1, L_000002617a921920, L_000002617a920f80, C4<0>, C4<0>;
+L_000002617a921760 .functor NOT 1, L_000002617a985510, C4<0>, C4<0>, C4<0>;
+L_000002617a921ae0 .functor AND 1, L_000002617a921760, L_000002617a986230, C4<1>, C4<1>;
+L_000002617a921840 .functor NOT 1, L_000002617a985510, C4<0>, C4<0>, C4<0>;
+L_000002617a9218b0 .functor OR 1, L_000002617a921840, L_000002617a986230, C4<0>, C4<0>;
+L_000002617a921d10 .functor AND 1, L_000002617a9218b0, L_000002617a920f80, C4<1>, C4<1>;
+L_000002617a921530 .functor OR 1, L_000002617a921ae0, L_000002617a921d10, C4<0>, C4<0>;
+v000002617a923660_0 .net *"_ivl_0", 0 0, L_000002617a921920;  1 drivers
+v000002617a9232a0_0 .net *"_ivl_10", 0 0, L_000002617a9218b0;  1 drivers
+v000002617a923ac0_0 .net *"_ivl_12", 0 0, L_000002617a921d10;  1 drivers
+v000002617a923980_0 .net *"_ivl_4", 0 0, L_000002617a921760;  1 drivers
+v000002617a922f80_0 .net *"_ivl_6", 0 0, L_000002617a921ae0;  1 drivers
+v000002617a923700_0 .net *"_ivl_8", 0 0, L_000002617a921840;  1 drivers
+v000002617a922800_0 .net "a", 0 0, L_000002617a985510;  1 drivers
+v000002617a9233e0_0 .net "b", 0 0, L_000002617a986230;  1 drivers
+v000002617a9228a0_0 .net "borrow_in", 0 0, L_000002617a920f80;  alias, 1 drivers
+v000002617a923020_0 .net "borrow_out", 0 0, L_000002617a921530;  alias, 1 drivers
+v000002617a923480_0 .net "diff", 0 0, L_000002617a921060;  1 drivers
+S_000002617a984980 .scope module, "stage2" "subtractor1bit" 3 31, 4 1 0, S_000002617a8cd9b0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "borrow_in";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "borrow_out";
+L_000002617a921a00 .functor XOR 1, L_000002617a985f10, L_000002617a986410, C4<0>, C4<0>;
+L_000002617a921e60 .functor XOR 1, L_000002617a921a00, L_000002617a921530, C4<0>, C4<0>;
+L_000002617a9213e0 .functor NOT 1, L_000002617a985f10, C4<0>, C4<0>, C4<0>;
+L_000002617a921610 .functor AND 1, L_000002617a9213e0, L_000002617a986410, C4<1>, C4<1>;
+L_000002617a921c30 .functor NOT 1, L_000002617a985f10, C4<0>, C4<0>, C4<0>;
+L_000002617a9217d0 .functor OR 1, L_000002617a921c30, L_000002617a986410, C4<0>, C4<0>;
+L_000002617a921ca0 .functor AND 1, L_000002617a9217d0, L_000002617a921530, C4<1>, C4<1>;
+L_000002617a9210d0 .functor OR 1, L_000002617a921610, L_000002617a921ca0, C4<0>, C4<0>;
+v000002617a923a20_0 .net *"_ivl_0", 0 0, L_000002617a921a00;  1 drivers
+v000002617a923b60_0 .net *"_ivl_10", 0 0, L_000002617a9217d0;  1 drivers
+v000002617a9229e0_0 .net *"_ivl_12", 0 0, L_000002617a921ca0;  1 drivers
+v000002617a922d00_0 .net *"_ivl_4", 0 0, L_000002617a9213e0;  1 drivers
+v000002617a922580_0 .net *"_ivl_6", 0 0, L_000002617a921610;  1 drivers
+v000002617a922440_0 .net *"_ivl_8", 0 0, L_000002617a921c30;  1 drivers
+v000002617a9230c0_0 .net "a", 0 0, L_000002617a985f10;  1 drivers
+v000002617a922da0_0 .net "b", 0 0, L_000002617a986410;  1 drivers
+v000002617a922760_0 .net "borrow_in", 0 0, L_000002617a921530;  alias, 1 drivers
+v000002617a922ee0_0 .net "borrow_out", 0 0, L_000002617a9210d0;  alias, 1 drivers
+v000002617a923160_0 .net "diff", 0 0, L_000002617a921e60;  1 drivers
+S_000002617a984b10 .scope module, "stage3" "subtractor1bit" 3 40, 4 1 0, S_000002617a8cd9b0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "borrow_in";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "borrow_out";
+L_000002617a921450 .functor XOR 1, L_000002617a9860f0, L_000002617a984cf0, C4<0>, C4<0>;
+L_000002617a921140 .functor XOR 1, L_000002617a921450, L_000002617a9210d0, C4<0>, C4<0>;
+L_000002617a921220 .functor NOT 1, L_000002617a9860f0, C4<0>, C4<0>, C4<0>;
+L_000002617a921300 .functor AND 1, L_000002617a921220, L_000002617a984cf0, C4<1>, C4<1>;
+L_000002617a921680 .functor NOT 1, L_000002617a9860f0, C4<0>, C4<0>, C4<0>;
+L_000002617a9216f0 .functor OR 1, L_000002617a921680, L_000002617a984cf0, C4<0>, C4<0>;
+L_000002617a9898f0 .functor AND 1, L_000002617a9216f0, L_000002617a9210d0, C4<1>, C4<1>;
+L_000002617a989960 .functor OR 1, L_000002617a921300, L_000002617a9898f0, C4<0>, C4<0>;
+v000002617a923200_0 .net *"_ivl_0", 0 0, L_000002617a921450;  1 drivers
+v000002617a923c00_0 .net *"_ivl_10", 0 0, L_000002617a9216f0;  1 drivers
+v000002617a923ca0_0 .net *"_ivl_12", 0 0, L_000002617a9898f0;  1 drivers
+v000002617a9223a0_0 .net *"_ivl_4", 0 0, L_000002617a921220;  1 drivers
+v000002617a923d40_0 .net *"_ivl_6", 0 0, L_000002617a921300;  1 drivers
+v000002617a923f20_0 .net *"_ivl_8", 0 0, L_000002617a921680;  1 drivers
+v000002617a923fc0_0 .net "a", 0 0, L_000002617a9860f0;  1 drivers
+v000002617a924060_0 .net "b", 0 0, L_000002617a984cf0;  1 drivers
+v000002617a922940_0 .net "borrow_in", 0 0, L_000002617a9210d0;  alias, 1 drivers
+v000002617a924100_0 .net "borrow_out", 0 0, L_000002617a989960;  alias, 1 drivers
+v000002617a9241a0_0 .net "diff", 0 0, L_000002617a921140;  1 drivers
+    .scope S_000002617a8cd820;
+T_0 ;
+    %vpi_call 2 21 "$dumpfile", "sub4_sim.vcd" {0 0 0};
+    %vpi_call 2 22 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002617a8cd820 {0 0 0};
+    %vpi_call 2 25 "$display", "Time |  A   -  B  - bin | Diff (Binary) | Bout" {0 0 0};
+    %vpi_call 2 26 "$display", "-----------------------------------------------" {0 0 0};
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v000002617a985650_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v000002617a9856f0_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002617a9850b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v000002617a985650_0, 0, 4;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v000002617a9856f0_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002617a9850b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v000002617a985650_0, 0, 4;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v000002617a9856f0_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002617a9850b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v000002617a985650_0, 0, 4;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v000002617a9856f0_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002617a9850b0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v000002617a985650_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v000002617a9856f0_0, 0, 4;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002617a9850b0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 48 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000002617a8cd820;
+T_1 ;
+    %vpi_call 2 53 "$monitor", "%4t | %b - %b - %b  |     %b      |  %b", $time, v000002617a985650_0, v000002617a9856f0_0, v000002617a9850b0_0, v000002617a9858d0_0, v000002617a985bf0_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "subtractor4bit_tb.v";
+    "subtractor4bit.v";
+    "subtractor1bit.v";

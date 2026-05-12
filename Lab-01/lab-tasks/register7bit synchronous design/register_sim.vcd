@@ -1,0 +1,67 @@
+$date
+	Wed May 13 00:39:38 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module register7bitSync_tb $end
+$var wire 7 ! q [6:0] $end
+$var reg 1 " clk $end
+$var reg 7 # d [6:0] $end
+$var reg 1 $ reset $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 7 % d [6:0] $end
+$var wire 7 & q [6:0] $end
+$var wire 7 ' q_next [6:0] $end
+$var wire 1 $ reset $end
+$var reg 7 ( q_reg [6:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 (
+b0 '
+b0 &
+b0 %
+1$
+b0 #
+0"
+b0 !
+$end
+#10
+1"
+#20
+0"
+b1010101 '
+b1010101 #
+b1010101 %
+0$
+#30
+b1010101 !
+b1010101 &
+b1010101 (
+1"
+#40
+0"
+b101010 '
+b101010 #
+b101010 %
+#50
+b101010 !
+b101010 &
+b101010 (
+1"
+#60
+0"
+#70
+1"
+#80
+0"

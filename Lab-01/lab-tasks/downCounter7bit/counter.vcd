@@ -1,0 +1,173 @@
+$date
+	Wed May 13 01:17:33 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module counter_tb $end
+$var wire 7 ! q [6:0] $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$scope module uut $end
+$var wire 1 " CLK $end
+$var wire 1 # Reset $end
+$var wire 7 $ q [6:0] $end
+$var wire 7 % q_temp [6:0] $end
+$var wire 7 & d_temp [6:0] $end
+$scope module register_circuit1 $end
+$var wire 1 " clk $end
+$var wire 1 # rst $end
+$var wire 7 ' d [6:0] $end
+$var reg 7 ( q [6:0] $end
+$upscope $end
+$scope module sub_circuit1 $end
+$var wire 7 ) I [6:0] $end
+$var wire 7 * O [6:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1111111 *
+b0 )
+b0 (
+b1111111 '
+b1111111 &
+b0 %
+b0 $
+1#
+0"
+b0 !
+$end
+#10
+1"
+#20
+0"
+0#
+#30
+b1111110 &
+b1111110 '
+b1111110 *
+b1111111 !
+b1111111 $
+b1111111 %
+b1111111 (
+b1111111 )
+1"
+#40
+0"
+#50
+b1111101 &
+b1111101 '
+b1111101 *
+b1111110 !
+b1111110 $
+b1111110 %
+b1111110 (
+b1111110 )
+1"
+#60
+0"
+#70
+b1111100 &
+b1111100 '
+b1111100 *
+b1111101 !
+b1111101 $
+b1111101 %
+b1111101 (
+b1111101 )
+1"
+#80
+0"
+#90
+b1111011 &
+b1111011 '
+b1111011 *
+b1111100 !
+b1111100 $
+b1111100 %
+b1111100 (
+b1111100 )
+1"
+#100
+0"
+#110
+b1111010 &
+b1111010 '
+b1111010 *
+b1111011 !
+b1111011 $
+b1111011 %
+b1111011 (
+b1111011 )
+1"
+#120
+0"
+#130
+b1111001 &
+b1111001 '
+b1111001 *
+b1111010 !
+b1111010 $
+b1111010 %
+b1111010 (
+b1111010 )
+1"
+#140
+0"
+#150
+b1111000 &
+b1111000 '
+b1111000 *
+b1111001 !
+b1111001 $
+b1111001 %
+b1111001 (
+b1111001 )
+1"
+#160
+0"
+#170
+b1110111 &
+b1110111 '
+b1110111 *
+b1111000 !
+b1111000 $
+b1111000 %
+b1111000 (
+b1111000 )
+1"
+#180
+0"
+#190
+b1110110 &
+b1110110 '
+b1110110 *
+b1110111 !
+b1110111 $
+b1110111 %
+b1110111 (
+b1110111 )
+1"
+#200
+0"
+#210
+b1110101 &
+b1110101 '
+b1110101 *
+b1110110 !
+b1110110 $
+b1110110 %
+b1110110 (
+b1110110 )
+1"
+#220
+0"
